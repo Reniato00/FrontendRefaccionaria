@@ -27,26 +27,28 @@ export default function BasicList() {
               <ListItemIcon>
                 <DraftsIcon />
               </ListItemIcon>
-              <ListItemText primary="Bombas de Agua" />
+              <ListItemText primary="Tapas" />
             </ListItemButton>
           </ListItem>
-        </List>
-      </nav>
-      <Divider />
-      <nav aria-label="secondary mailbox folders">
-        <List>
           <ListItem disablePadding>
             <ListItemButton>
-              <ListItemText primary="Text" />
+              <ListItemIcon>
+                <DraftsIcon />
+              </ListItemIcon>
+              <ListItemText primary="Ventilador/Abanico" />
             </ListItemButton>
           </ListItem>
           <ListItem disablePadding>
-            <ListItemButton component="a" href="#simple-list">
-              <ListItemText primary="Text" />
+            <ListItemButton>
+              <ListItemIcon>
+                <DraftsIcon />
+              </ListItemIcon>
+              <ListItemText primary="Accesorios" />
             </ListItemButton>
           </ListItem>
         </List>
       </nav>
+  
     </Box>
   );
 }

@@ -1,68 +1,39 @@
 
 
-function createData(id, name, marca, modelo, ano, inventario ,img) {
-    return {
-      id,
-      name,
-      marca,
-      modelo,
-      ano,
-      inventario,
-      img,
-    };
-}
 
-const rows = [
-    createData(1, 'Radiador', 'Honda', 'Civic', 2011,3, 'img.jpg'),
-    createData(2, 'Bomba de Agua', 'Honda', 'City', 2022,1,'img.jpg'),
-    createData(3, 'Radiador', 'Honda', 'Accord', 2020,0, 'img.jpg'),
-    createData(4, 'Bomba de Agua', 'Nissan', 'Sentra', 2018,2, 'img.jpg'),
-    createData(5, 'Bomba de Agua', 'Nissan', 'Versa', 2019,5, 'img.jpg'),
-    createData(6, 'Radiador', 'Nissan', 'March', 2018,0, 'img.jpg'),
-    createData(7, 'Bomba de Agua', 'Honda', 'HR-V', 2015,1, 'img.jpg'),
-    createData(8, 'Radiador', 'BMW', 'i4', 2012,2, 'img.jpg'),
-    createData(9, 'Radiador', 'Audi', 'A4', 2023,1, 'img.jpg'),
-    createData(10, 'Radiador', 'Honda', 'CR-V', 2018,3, 'img.jpg'),
-    createData(11, 'Radiador', 'Mazda', 'CX-5', 2019,4, 'img.jpg'),
-    createData(12, 'Radiador', 'BMW', 'Z4', 2020,1, 'img.jpg'),
-    createData(13, 'Bomba de Agua', 'Mazda', 'Mazda 3',0, 2018, 'img.jpg'),
-  ];
+export const rows = [
+  { id: 1, tipo: 'Radiador', marca: 'Honda', ano: 2011,inventario:1 ,img:'img.jpg'},
+  { id: 2, tipo: 'Tapa', marca: 'Honda', ano: 2012,inventario:1,img:'img.jpg' },
+  { id: 3, tipo: 'Tapa', marca: 'Nissan', ano: 2013,inventario:1,img:'img.jpg' },
+  { id: 4, tipo: 'Ventilador/Abanico', marca: 'Nissan', ano: 2015,inventario:1,img:'img.jpg' },
+  { id: 5, tipo: 'Ventilador/Abanico', marca: 'Nissan', ano: 2020 ,inventario:1,img:'img.jpg'},
+  { id: 6, tipo: 'Radiador', marca: 'Mazda', ano: 2020 ,inventario:1,img:'img.jpg'},
+  { id: 7, tipo: 'Ventilador/Abanico', marca: 'Mazda', ano: 2021,inventario:1 ,img:'img.jpg'},
+  { id: 8, tipo: 'Accesorios', marca: 'Honda', ano: 2018,inventario:1 ,img:'img.jpg'},
+  { id: 9, tipo: 'Accesorios', marca: 'Harvey', ano: 2018 ,inventario:1,img:'img.jpg'},
+  { id: 10, tipo: 'Radiador', marca: 'Audi', ano: 2019 ,inventario:1,img:'img.jpg'},
+  { id: 11, tipo: 'Accesorios', marca: 'Audi', ano: 2018 ,inventario:1,img:'img.jpg'},
+  { id: 12, tipo: 'Tapa', marca: 'Audi', ano: 2018 ,inventario:1,img:'img.jpg'},
+  { id: 13, tipo: 'Radiador', marca: 'BMW', ano: 2015 ,inventario:1,img:'img.jpg'},
+  { id: 14, tipo: 'Radiador', marca: 'BMW', ano: 2016 ,inventario:1,img:'img.jpg'},
+];
 
-  const headCells = [
-    {
-      id: 'name',
-      numeric: false,
-      disablePadding: true,
-      label: 'name',
-    },
-    {
-      id: 'marca',
-      numeric: false,
-      disablePadding: false,
-      label: 'marca',
-    },
-    {
-      id: 'modelo',
-      numeric: false,
-      disablePadding: false,
-      label: 'modelo',
-    },
-    {
-      id: 'ano',
-      numeric: true,
-      disablePadding: false,
-      label: 'año',
-    },
-    {
-      id: 'inventario',
-      numeric: true,
-      disablePadding: false,
-      label: 'inventario',
-    },
-    {
-        id:'img',
-        numeric:false,
-        disablePadding:false,
-        label:'img',
-    },
-  ];
+
+ export const columns = [
+  { field: 'id', headerName: 'ID', width: 70 },
+  { field: 'tipo', headerName: 'TIPO', width: 130 },
+  { field: 'marca', headerName: 'MARCA', width: 130 },
+  {
+    field: 'ano',
+    headerName: 'AÑO',
+    type: 'number',
+    width: 90,
+  },
+  {
+    field: 'inventario',
+    headerName: 'EXISTENCIA',
+    type: 'number',
+    width: 100,
+  },
+  { field: 'img', headerName: 'IMAGEN', width: 130 },
+];
