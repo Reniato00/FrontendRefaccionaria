@@ -1,4 +1,5 @@
 
+import axios from 'axios';
 
 
 export const rows = [
@@ -20,7 +21,7 @@ export const rows = [
 
 
  export const columns = [
-  { field: 'id', headerName: 'ID', width: 70 },
+  { field: 'idProducto', headerName: 'Id', width: 70 },
   {
     field: 'precioNuevoSuelto',
     headerName: 'Precio Nuevo Suelto',
@@ -46,12 +47,12 @@ export const rows = [
     width: 130,
   },
   {
-    field: 'costoProvedor',
+    field: 'costoProveedor',
     headerName: 'Costo Provedor',
     type: 'number',
     width: 130,
   },
-  { field: 'tipo', headerName: 'Tipo', width: 130 },
+  { field: 'idTipoProducto', headerName: 'Tipo', width: 130 },
   { field: 'noParte', headerName: 'Lote', width: 130 },
   { field: 'material', headerName: 'Material', width: 130 },
   { field: 'observaciones', headerName: 'Observaciones', width: 130 },
@@ -71,3 +72,10 @@ export const rows = [
   },
   { field: 'img', headerName: 'Imagen', width: 130 },
 ];
+
+
+
+export const getAllProducts = () => {
+  return axios.get('http://localhost:5182/api/Producto/ListaProducto');
+}
+

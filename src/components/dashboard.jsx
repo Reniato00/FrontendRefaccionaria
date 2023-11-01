@@ -10,9 +10,11 @@ import ResponsiveAppBar from './navbar';
 import DataTable from './tableGrid';
 import BasicList from './filterSidebar';
 
-import { rows, columns } from '../models/product';
+import { rows, columns, getAllProducts } from '../models/product';
+import { func } from 'prop-types';
 
 const defaultTheme = createTheme();
+
 
 export default function Main() {
     return(
@@ -34,7 +36,7 @@ export default function Main() {
                                 </Box>
                                 <Box gridColumn="span 9" >
                                     
-                                    <DataTable rows={rows} columns={columns}/>
+                                    <DataTable rows={rows} columns={columns} />
                                     
                                 </Box>
                             </Box>
@@ -52,3 +54,4 @@ export default function Main() {
         </ThemeProvider>
     )
 }
+
