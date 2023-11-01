@@ -5,26 +5,20 @@ import CssBaseline from '@mui/material/CssBaseline';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
-import { Link } from 'react-router-dom';
+import Divider from '@mui/material/Divider';
+
 
 
 import ResponsiveAppBar from './navbar';
-import DataTable from './tableGrid';
-import BasicList from './filterSidebar';
+import FilterMarcas from './FiltersComponents/filterMarcas';
 
-import { rows, columns, getAllProducts } from '../models/product';
-import { func } from 'prop-types';
 
 const defaultTheme = createTheme();
 
-const linkStyles = {
-    textDecoration: 'none', // Elimina la subrayado del enlace
-    color: 'inherit', // Cambia el color del texto del enlace
-    // Agrega otros estilos según tus preferencias
-  };
 
 
-export default function Main() {
+
+export default function FilterMain() {
     return(
         <ThemeProvider theme={defaultTheme}>
             
@@ -39,16 +33,11 @@ export default function Main() {
                         <Container maxWidth="">
                             <Box display="grid" gridTemplateColumns="repeat(12, 1fr)" gap={2}>
                                 
-                                <Box gridColumn={"span 12"} >
+                                <Box mt={2} gridColumn={"span 12"} >
                                     
-                                    <DataTable rows={rows} columns={columns} />
-                                    <Grid container justifyContent="flex-end">
-                                        <Box mt={2} >
-                                            <Button variant="contained">
-                                                <Link to="/filter" style={linkStyles}>Busqueda Especifica</Link>
-                                            </Button>
-                                        </Box>
-                                    </Grid>
+                                <FilterMarcas/>
+                                <Divider />
+
                                     
                                     
                                 </Box>

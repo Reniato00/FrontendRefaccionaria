@@ -21,56 +21,64 @@ export const rows = [
 
 
  export const columns = [
-  { field: 'idProducto', headerName: 'Id', width: 70 },
+  { field: 'idProducto', headerName: 'Id', width: 70 ,filterable: true},
   {
     field: 'precioNuevoSuelto',
     headerName: 'Precio Nuevo Suelto',
     type: 'number',
     width: 130,
+    filterable: true
   },
   {
     field: 'precioNuevoInstalado',
     headerName: 'Precio Nuevo Instalado',
     type: 'number',
     width: 130,
+    filterable: true
   },
   {
     field: 'precioReparadoSuelto',
     headerName: 'Precio Reparado Suelto',
     type: 'number',
     width: 130,
+    filterable: true
   },
   {
     field: 'precioReparadoInstalado',
     headerName: 'Precio Reparado Instalado',
     type: 'number',
     width: 130,
+    filterable: true
   },
   {
     field: 'costoProveedor',
     headerName: 'Costo Provedor',
     type: 'number',
     width: 130,
+    filterable: true
+    
   },
-  { field: 'idTipoProducto', headerName: 'Tipo', width: 130 },
-  { field: 'noParte', headerName: 'Lote', width: 130 },
-  { field: 'material', headerName: 'Material', width: 130 },
-  { field: 'observaciones', headerName: 'Observaciones', width: 130 },
-  { field: 'marca', headerName: 'Marca', width: 130 },
-  { field: 'modelo', headerName: 'Modelo', width: 130 },
+  { field: 'idTipoProducto', headerName: 'Tipo', width: 130 ,filterable: true},
+  { field: 'noParte', headerName: 'Lote', width: 130,filterable: true },
+  { field: 'material', headerName: 'Material', width: 130,filterable: true },
+  { field: 'observaciones', headerName: 'Observaciones', width: 130,filterable: true },
+  { field: 'marca', headerName: 'Marca', width: 130,filterable: true },
+  { field: 'modelo', headerName: 'Modelo', width: 130,filterable: true },
   {
     field: 'ano',
     headerName: 'Año',
     type: 'number',
     width: 90,
+    filterable: true
   },
   {
     field: 'inventario',
     headerName: 'Inventario',
     type: 'number',
     width: 100,
+    filterable: true
   },
-  { field: 'img', headerName: 'Imagen', width: 130 },
+  { field: 'img', headerName: 'Imagen', width: 130,filterable: true },
 ];
 
 
