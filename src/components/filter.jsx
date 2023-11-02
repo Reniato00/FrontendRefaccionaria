@@ -11,6 +11,7 @@ import Divider from '@mui/material/Divider';
 
 import ResponsiveAppBar from './navbar';
 import FilterMarcas from './FiltersComponents/filterMarcas';
+import FilterModelos from './FiltersComponents/filterModelos';
 
 
 const defaultTheme = createTheme();
@@ -37,6 +38,7 @@ export default function FilterMain() {
                                     
                                 <FilterMarcas/>
                                 <Divider />
+                                <FilterModelos/>
 
                                     
                                     

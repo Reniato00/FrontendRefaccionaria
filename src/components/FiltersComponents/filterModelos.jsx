@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import { getAllMarcas } from "../../models/marca.api";
+import { getAllMarcas } from "../../models/auto.api";
 import Grid from '@mui/material/Grid';
 
-export default function FilterMarcas() {
+export default function FilterModelos() {
     const [Marcas, setMarcas] = useState([]); // Inicializa como un array vacío
 
     useEffect(() => {

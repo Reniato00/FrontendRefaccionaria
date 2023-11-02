@@ -12,7 +12,7 @@ import ResponsiveAppBar from './navbar';
 import DataTable from './tableGrid';
 import BasicList from './filterSidebar';
 
-import { rows, columns, getAllProducts } from '../models/product';
+import { rows, columns, getAllProducts } from '../models/product.api';
 import { func } from 'prop-types';
 
 const defaultTheme = createTheme();
