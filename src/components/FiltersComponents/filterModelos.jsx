@@ -1,28 +1,35 @@
 import { useEffect, useState } from "react";
-import { getAllMarcas } from "../../models/auto.api";
+import { getAllModelo } from "../../models/auto.api";
 import Grid from '@mui/material/Grid';
+import { Button } from "@mui/material";
 
-export default function FilterModelos() {
-    const [Marcas, setMarcas] = useState([]); // Inicializa como un array vacío
+export default function FilterModelos(props) {
+    const [Modelos, setModelos] = useState([]); // Inicializa como un array vacío
 
     useEffect(() => {
         async function loadMarcas() {
-            const res = await getAllMarcas();
-            console.log(res.data);
-            setMarcas(res.data);
+            const res = await getAllModelo();
+            
+            setModelos(res.data);
         }
         loadMarcas();
     }, []);
 
+    function handleButtonClick(id) {
+        props.setModelo(id);
+        console.log(id);
+    }
+
     return (
         <div>
             <Grid container justifyContent="space-around">
-                {Marcas.map((marca) => (
-                    <Grid item key={marca.idMarca} xs={12} sm={6} md={4} lg={3}>
+                {Modelos.map((modelo) => (
+                    <Grid item key={modelo.idAuto} xs={12} sm={6} md={4} lg={3}>
                         {/* Renderiza cada marca como un rectángulo */}
                         <div style={{ border: '1px solid #ccc', padding: '10px', marginBottom: '10px' }}>
-                            <h3>{marca.nombreMarca}</h3>
-                            {/* Otros detalles de la marca */}
+                            <h3>{modelo.modelo}</h3>
+                            <Button onClick={()=> handleButtonClick(modelo.idAuto)}>Aqui Modelo</Button>
+                            
                         </div>
                     </Grid>
                 ))}
