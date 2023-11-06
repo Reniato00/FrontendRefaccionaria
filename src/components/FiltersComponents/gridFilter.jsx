@@ -2,7 +2,7 @@ import * as React from 'react';
 import { useState,useEffect } from 'react';
 import { DataGrid } from '@mui/x-data-grid';
 
-export default function GridFilter() {
+export default function GridFilter(props) {
     return(
         <>
             <div style={{ height: 400, width: '100%' }}>

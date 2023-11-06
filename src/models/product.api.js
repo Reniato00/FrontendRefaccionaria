@@ -84,6 +84,6 @@ export const rows = [
 
 
 export const getAllProducts = () => {
-  return axios.get('http://localhost:5182/api/Producto/ListaProducto');
+  return axios.get('http://localhost:5182/api/Radiadores/ListaRadiadores');
 }
 

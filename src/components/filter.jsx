@@ -7,23 +7,31 @@ import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Divider from '@mui/material/Divider';
+import { Link } from 'react-router-dom';
 
 
 
 import ResponsiveAppBar from './navbar';
 import FilterMarcas from './FiltersComponents/filterMarcas';
 import FilterModelos from './FiltersComponents/filterModelos';
-import GridFilter from './FiltersComponents/gridFilter';
+import FilterAnos from './FiltersComponents/filterAnos';
+
 
 
 const defaultTheme = createTheme();
 
+const linkStyles = {
+    textDecoration: 'none', // Elimina la subrayado del enlace
+    color: 'inherit', // Cambia el color del texto del enlace
+    // Agrega otros estilos según tus preferencias
+  };
 
 
 
 export default function FilterMain() {
     const [Marca,setMarca] = useState(0);
     const [Modelo,setModelo] = useState();
+    const [Ano,setAno] =useState()
 
 
     return(
@@ -41,6 +49,12 @@ export default function FilterMain() {
                             <Box display="grid" gridTemplateColumns="repeat(12, 1fr)" gap={2}>
                                 
                                 <Box mt={2} mb={2} gridColumn={"span 12"} >
+                                    <Box mt={2} mb={2} gridColumn={"span 12"} >
+                                        <h1>Año</h1>
+                                        <FilterAnos setAno={setAno}/>
+                                    </Box>
+                                    
+                                    <Divider />
                                     <Box mt={2} gridColumn={"span 12"} >
                                         <h1>Marcas</h1>
                                         <FilterMarcas setMarca = {setMarca} />
@@ -50,10 +64,15 @@ export default function FilterMain() {
                                         <h1>Modelos</h1>
                                         <FilterModelos setModelo = {setModelo}/>
                                     </Box>
-                                    <Divider />
-                                    <Box mt={2} mb={2} gridColumn={"span 12"} >
-                                        
-                                    </Box>
+                                    <Grid container justifyContent="flex-end">
+                                        <Box mt={2} >
+                                            <Button variant="contained">
+                                                <Link to="/gridFilterAdvanced" style={linkStyles}>Buscar</Link>
+                                            </Button>
+                                        </Box>
+                                    </Grid>
+                                    
+                                    
                                     
                                     
 
