@@ -87,3 +87,8 @@ export const getAllProducts = () => {
   return axios.get('http://localhost:5182/api/Radiadores/ListaRadiadores');
 }
 
+export const getProductsByMarcaModeloYear= (marca,modelo,year) => {
+  const urlWithParameters = "http://localhost:5182/api/Radiadores/PorMarcaAutoYear?idMarca=1&idAuto=1&year=2022";
+  return axios.get (urlWithParameters);
+}
+

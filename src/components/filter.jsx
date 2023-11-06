@@ -33,7 +33,7 @@ export default function FilterMain() {
     const [Modelo,setModelo] = useState();
     const [Ano,setAno] =useState()
 
-
+const urlWithParameters = `/gridFilterAdvanced?marca=${Marca}&modelo=${Modelo}&year=${Ano}`;
     return(
         <ThemeProvider theme={defaultTheme}>
             
@@ -67,7 +67,7 @@ export default function FilterMain() {
                                     <Grid container justifyContent="flex-end">
                                         <Box mt={2} >
                                             <Button variant="contained">
-                                                <Link to="/gridFilterAdvanced" style={linkStyles}>Buscar</Link>
+                                                <Link to={urlWithParameters} style={linkStyles}>Buscar</Link>
                                             </Button>
                                         </Box>
                                     </Grid>
