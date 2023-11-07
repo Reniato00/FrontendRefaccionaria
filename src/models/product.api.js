@@ -88,7 +88,7 @@ export const getAllProducts = () => {
 }
 
 export const getProductsByMarcaModeloYear= (marca,modelo,year) => {
-  const urlWithParameters = "http://localhost:5182/api/Radiadores/PorMarcaAutoYear?idMarca=1&idAuto=1&year=2022";
+  const urlWithParameters = `http://localhost:5182/api/Radiadores/PorMarcaAutoYear?idMarca=${marca}&idAuto=${modelo}&year=${year}`;
   return axios.get (urlWithParameters);
 }
 

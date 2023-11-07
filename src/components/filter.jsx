@@ -8,6 +8,7 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Divider from '@mui/material/Divider';
 import { Link } from 'react-router-dom';
+import GridFilter from './FiltersComponents/gridFilter';
 
 
 
@@ -24,6 +25,7 @@ const linkStyles = {
     textDecoration: 'none', // Elimina la subrayado del enlace
     color: 'inherit', // Cambia el color del texto del enlace
     // Agrega otros estilos según tus preferencias
+    
   };
 
 
@@ -32,6 +34,7 @@ export default function FilterMain() {
     const [Marca,setMarca] = useState(0);
     const [Modelo,setModelo] = useState();
     const [Ano,setAno] =useState()
+    const [showComponent,setShowComponent] =useState(false);
 
 const urlWithParameters = `/gridFilterAdvanced?marca=${Marca}&modelo=${Modelo}&year=${Ano}`;
     return(
@@ -66,11 +69,20 @@ const urlWithParameters = `/gridFilterAdvanced?marca=${Marca}&modelo=${Modelo}&y
                                     </Box>
                                     <Grid container justifyContent="flex-end">
                                         <Box mt={2} >
-                                            <Button variant="contained">
-                                                <Link to={urlWithParameters} style={linkStyles}>Buscar</Link>
+                                            <Button  variant="contained" onClick={()=>setShowComponent(false)} style={{marginRight:'10px'}}>Reiniciar</Button>
+                                            <Button variant="contained" onClick={()=> setShowComponent(!showComponent)}>
+                                                Buscar
+                                                {/*<Link to={urlWithParameters} style={linkStyles}>Buscar</Link> */}
                                             </Button>
                                         </Box>
                                     </Grid>
+                                    {showComponent && (
+                                        <Box mt={2} mb={2} gridColumn={"span 12"} >
+                                            <GridFilter marca={Marca} modelo={Modelo} year = {Ano} />
+                                        
+                                        </Box>
+                                    )}
+                                    
                                     
                                     
                                     
