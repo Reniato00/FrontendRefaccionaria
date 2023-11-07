@@ -10,10 +10,10 @@ import { Link } from 'react-router-dom';
 
 import ResponsiveAppBar from './navbar';
 import DataTable from './tableGrid';
-import BasicList from './filterSidebar';
 
-import { rows, columns, getAllProducts } from '../models/product.api';
-import { func } from 'prop-types';
+
+import { rows, columns } from '../models/product.api';
+
 
 const defaultTheme = createTheme();
 
