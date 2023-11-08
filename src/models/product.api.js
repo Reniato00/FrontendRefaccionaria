@@ -84,11 +84,11 @@ export const rows = [
 
 
 export const getAllProducts = () => {
-  return axios.get('http://localhost:5182/api/Radiadores/ListaRadiadores');
+  return axios.get('http://127.0.0.1:5182/api/Radiadores/ListaRadiadores');
 }
 
 export const getProductsByMarcaModeloYear= (marca,modelo,year) => {
-  const urlWithParameters = `http://localhost:5182/api/Radiadores/PorMarcaAutoYear?idMarca=${marca}&idAuto=${modelo}&year=${year}`;
+  const urlWithParameters = `http://127.0.0.1:5182/api/Radiadores/PorMarcaAutoYear?idMarca=${marca}&idAuto=${modelo}&year=${year}`;
   return axios.get (urlWithParameters);
 }
 

@@ -69,7 +69,7 @@ export default function DataTable(props) {
   },[]);
 
   return (
-    <div style={{ height: 400, width: '100%' }}>
+    <div >
       <DataGrid
         rows={Products || []}
         columns={columns}
